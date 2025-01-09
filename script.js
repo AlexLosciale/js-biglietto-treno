@@ -35,3 +35,5 @@ if (etaPersona < 18 ) {
 }
 
 console.log( "costo scontato: ",Number((costo - costoSconto).toFixed(2)));
+
+alert( "il tuo costo scontato " + (costo - costoSconto).toFixed(2));
