@@ -16,8 +16,22 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 3-stampare il prezzo finale del viaggio, con in totlae in decimali.
 */
 
-const prize = ("0,21$")
+const prize = 0.21;
 
-let KMviaggio= prompt("inserisci i km di viaggio", "10");
+let kmViaggio = Number(prompt("inserisci i km di viaggio"));
 
-let ETApersona = prompt("inserisci la tua eta", "20");
+let etaPersona = Number(prompt("inserisci la tua eta"));
+
+let costo = (prize * kmViaggio);
+
+let costoSconto = 0;
+
+console.log("costo inziale: ", costo);
+
+if (etaPersona < 18 ) {
+    costoSconto = (costo / 100 * 20);
+} else if (etaPersona >= 65) {
+    costoSconto = (costo / 100 * 40);
+}
+
+console.log( "costo scontato: ",Number((costo - costoSconto).toFixed(2)));
